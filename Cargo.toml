@@ -1,0 +1,24 @@
+[package]
+name = "rust-eve-astar"
+version = "0.1.0"
+authors = ["Daniel Speed <dan@the-nexus.co.uk>"]
+edition = "2021"
+
+[features]
+download = ["dep:reqwest"]
+
+[dependencies]
+reqwest =  { version = "0.11.3", features = ["stream", "blocking"], optional = true }
+serde = {version = "1.0.163", features = ["derive"]}
+serde_yaml = "0.9.21"
+once_cell = "1.16.0"
+clap = { version = "4.0.22", features = ["derive"]}
+zip = "0.6.4"
+ordered-float = "4.2.0"
+eyre = "0.6.8"
+crossbeam = "0.8.2"
+crossbeam-queue = "0.3.8"
+rayon = "1.7.0"
+quote = "1.0.27"
+walkdir = "2.3.3"
+num = "0.4.1"
